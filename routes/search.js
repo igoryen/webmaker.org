@@ -10,7 +10,7 @@ module.exports = function( make ) {
     options = {};
 
     if ( type === 'tags' ) {
-      var tags = query.split(',');
+      var tags = query.substring(0,512).split(',');
       options.tags = [];
       if( tags.length === 1 ) { // try splitting with spaces, too
         tags = query.split(' ');
