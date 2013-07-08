@@ -9,11 +9,11 @@ module.exports = function( make ) {
           "description"
         ];
 
-    var type = ( req.query.type || DEFAULT_TYPE ).toString(),
-        query = ( req.query.q || DEFAULT_QUERY ).toString(),
-        sortByField = ( req.query.sortByField || "createdAt" ).toString(),
-        sortByOrder = ( req.query.order || "desc" ).toString(),
-        page = ( req.query.page || 1 ).toString(),
+    var type = ( req.query.type || DEFAULT_TYPE ).toString().substring( 0, 512 ),
+        query = ( req.query.q || DEFAULT_QUERY ).toString().substring( 0, 512 ),
+        sortByField = ( req.query.sortByField || "createdAt" ).toString().substring( 0, 512 ),
+        sortByOrder = ( req.query.order || "desc" ).toString().substring( 0, 512 ),
+        page = ( req.query.page || 1 ).toString().substring( 0, 512 ),
         options = {};
 
     if ( VALID_TYPES.indexOf( type ) === -1 ) {
