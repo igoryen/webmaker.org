@@ -50,9 +50,9 @@
         </ul>
         <ul class="nav-list">
           <li>
-            <a {% if page == 'index' %}class="on"{% endif %} id="nav-index" href="/">{{ gettext("Make") }}</a>
+            <a {% if page == 'index' %}class="on"{% endif %} id="nav-index" href="/{{lang}}/">{{ gettext("Make") }}</a>
             <div class="makenav-hover">
-              <a href="/starter-makes" class="makenav-hover-item">
+              <a href="/{{lang}}/starter-makes" class="makenav-hover-item">
                 <img src="/img/icon-make-template.png" alt="{{ gettext("From starter make") }}" />
                 <span>{{ gettext("From starter make") }}</span>
               </a>
